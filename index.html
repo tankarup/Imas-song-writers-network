@@ -14,10 +14,10 @@
   <body onload="draw()">
   <h1>アイドルマスター　作詞作曲家ネットワーク図</h1>
   <ul>
-  <li>アイドルマスターシリーズ(765AS、シンデレラ、ミリオン、SideM、シャイニー)の楽曲から1157曲を分析し、作詞家、作曲家がどの作品に携わっているのか、誰が複数の作品に携わっているのか、などをネットワーク図で可視化しました。なお作詞・作曲は一緒にしています。</li>
+  <li>アイドルマスターシリーズ(765AS、シンデレラ、ミリオン、SideM、シャイニー)の楽曲から1157曲を分析し、ネットワーク図で可視化しました。作詞家、作曲家がどの作品に携わっているのか、誰が複数の作品に携わっているのか、などが見えてくると思います。なお作詞・作曲は一緒にしています。</li>
   <li>表示が完了するまで30秒ほどかかります。ご容赦ください。</li>
   <li>線の太さは楽曲提供数に比例しています。</li>
-  <li>点はマウスで動かせます。</li>
+  <li>拡大・縮小や、点の移動もできます。グリグリ動かしてみてください。</li>
   </ul>
     <div id="network"></div>
     <script type="text/javascript">
@@ -28,11 +28,11 @@
     function draw() {
       // create people.
       // value corresponds with the age of the person
-      nodes = [{'id': 1, 'label': 'シンデレラ', 'color': '#2581C7'},
- {'id': 2, 'label': 'ミリオン', 'color': '#FFC20B'},
- {'id': 3, 'label': 'シャイニー', 'color': '#8DBAFF'},
- {'id': 4, 'label': 'SideM', 'color': '#11BE93'},
- {'id': 5, 'label': '765AS', 'color': '#F34E6C'},
+      nodes = [{'id': 1, 'label': 'シンデレラ', 'color': '#2581C7', 'font':{'size': 50}},
+ {'id': 2, 'label': 'ミリオン', 'color': '#FFC20B','font':{'size': 50}},
+ {'id': 3, 'label': 'シャイニー', 'color': '#8DBAFF','font':{'size': 50}},
+ {'id': 4, 'label': 'SideM', 'color': '#11BE93','font':{'size': 50}},
+ {'id': 5, 'label': '765AS', 'color': '#F34E6C','font':{'size': 50}},
  {'id': 11, 'label': '本田光史郎', 'value': 5},
  {'id': 12, 'label': 'Albi Albertsson', 'value': 2},
  {'id': 13, 'label': 'Linda & Sgt.', 'value': 1},
