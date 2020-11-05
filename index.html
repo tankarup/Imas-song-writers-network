@@ -71,6 +71,10 @@
       font {
         font-size: small;
       }
+      #informations {
+          clear:both;
+          font-size: small;
+      }
     </style>
     <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
   </head>
@@ -79,7 +83,7 @@
   <ul>
   <li>アイドルマスターシリーズ(765AS、シンデレラ、ミリオン、SideM、シャイニー)の楽曲1157曲を分析し、作詞作曲家のつながりをネットワーク図にしました。作詞家、作曲家がどの作品に携わっているのか、誰が複数の作品に携わっているのか、などが見えてくると思います。なお作詞・作曲は区別なくまとめています。</li>
   <li>線の太さは楽曲提供数に比例しています。</li>
-  <li>データは2020年8月に調査したものであり、最新の情報ではありません。</li>
+  <li>データは必ずしも最新の情報ではありません。</li>
   </ul>
 
   <div id="wrapper">
@@ -93,8 +97,13 @@
       </div>
     </div>
   </div>
-  <p style="font-size: small;">アイドルマスターはバンダイナムコエンターテインメントの著作物です。各シリーズのアイコンは<a href="https://idolmaster-official.jp/">ホームページ</a>の画像を転載したものです。</p>
-
+  <div id="informations">
+    <ul>
+      <li>アイドルマスターおよび関連作品はバンダイナムコエンターテインメント社が所有するコンテンツです。ここで使用しているアイコンの著作権は同社に帰属します。</li>
+      <li>楽曲の情報は<a href="https://fujiwarahaji.me/">デレマス・ミリマス・シャニマス楽曲DB</a>から2020/11に取得したものを使用しています。</li>
+      <li>バグ報告や機能改善案などは<a href="https://github.com/tankarup/Imas-song-writers-network">Github</a>へ</li>
+    </ul>
+  </div>
     <script src="imas-song-writers-network.js"></script>
   </body>
 </html>
