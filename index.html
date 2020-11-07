@@ -2,6 +2,10 @@
   <head>
 	<title>アイドルマスター　作詞作曲家ネットワーク図</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis-network.min.css" rel="stylesheet">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
     <style type="text/css">
       #network {
         width:  100%;
@@ -79,14 +83,25 @@
     <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
   </head>
   <body onload="draw()">
-  <h1>アイドルマスター　作詞作曲家ネットワーク図</h1>
+  <h1 class="bg-primary text-light h3 text-center">アイドルマスター　作詞作曲家ネットワーク図</h1>
   <ul>
   <li>アイドルマスターシリーズ(765AS、シンデレラ、ミリオン、SideM、シャイニー)の楽曲1157曲を分析し、作詞作曲家のつながりをネットワーク図にしました。作詞家、作曲家がどの作品に携わっているのか、誰が複数の作品に携わっているのか、などが見えてくると思います。なお作詞・作曲は区別なくまとめています。</li>
   <li>線の太さは楽曲提供数に比例しています。</li>
   <li>データは必ずしも最新の情報ではありません。</li>
   </ul>
+  <div class="row">
+    <div class="offset-7 col-4">
+      <div class="input-group input-group-sm mb-3">
+        <input type="text" class="form-control" id="text_search" onkeypress="keypress_search(event.keyCode);">
+        <div class="input-group-append">
+          <button class="btn btn-secondary" type="button" id="btn_search" onclick="btn_search();">アーティスト検索</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div id="wrapper">
+
     <div id="network"></div>
     <div id="loadingBar">
       <div class="outerBorder">
@@ -104,6 +119,10 @@
       <li>バグ報告や機能改善案などは<a href="https://github.com/tankarup/Imas-song-writers-network">Github</a>へ</li>
     </ul>
   </div>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
     <script src="imas-song-writers-network.js"></script>
   </body>
 </html>
