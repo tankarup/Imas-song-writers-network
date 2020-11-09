@@ -3078,7 +3078,7 @@ edges =
  {'color': {'color': '#F34E6C', 'highlight': '#F34E6C', 'opacity': 0.8},
   'from': 'as',
   'to': '内藤匠',
-  'value': 2}]
+'value': 2}]
 ;
 
 function keypress_search(code){
@@ -3112,11 +3112,26 @@ function draw() {
     nodes: {
       shape: 'dot',
       scaling: {
+        min:2,
+        max:10,
         customScalingFunction: function (min,max,total,value) {
-          return value/total;
+          if (max === min) {
+            return 0.5;
+          }
+          else {
+            var scale = 1 / (Math.pow(max,0.5) - Math.pow(min,0.5));
+            return Math.max(0,(Math.pow(value,0.5) - Math.pow(min,0.5))*scale);
+          }
         },
-        min:5,
-        max:150
+        label: {
+          enabled: true,
+          min: 10,
+          max: 20,
+        },
+      },
+      font: {
+        strokeWidth: 2,
+
       }
     },
     layout: {
